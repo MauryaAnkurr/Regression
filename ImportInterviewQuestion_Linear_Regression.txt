@@ -1,0 +1,190 @@
+1. What is linear regression?
+  In simple terms, linear regression is a method of finding the best straight line fitting to the given data, i.e. finding the best linear relationship between the independent and dependent variables.
+  In technical terms, linear regression is a machine learning algorithm that finds the best linear-fit relationship on any given data, between independent and dependent variables. It is mostly done by the Sum of Squared Residuals Method.
+
+2. State the assumptions in a linear regression model.
+  There are three main assumptions in a linear regression model:
+
+  The assumption about the form of the model:
+  It is assumed that there is a linear relationship between the dependent and independent variables. It is known as the ‘linearity assumption’.
+  Assumptions about the residuals:
+  Normality assumption: It is assumed that the error terms, ε(i), are normally distributed.
+  Zero mean assumption: It is assumed that the residuals have a mean value of zero.
+  Constant variance assumption: It is assumed that the residual terms have the same (but unknown) variance, σ2 This assumption is also known as the assumption of homogeneity or homoscedasticity.
+  Independent error assumption: It is assumed that the residual terms are independent of each other, i.e. their pair-wise covariance is zero.
+
+  Assumptions about the estimators:
+    The independent variables are measured without error.
+    The independent variables are linearly independent of each other, i.e. there is no multicollinearity in the data.
+    Explanation:
+       This is self-explanatory.
+       If the residuals are not normally distributed, their randomness is lost, which implies that the model is not able to explain the relation in the data.
+       Also, the mean of the residuals should be zero.
+       Y(i)i= β0+ β1x(i) + ε(i)
+       This is the assumed linear model, where ε is the residual term.
+       E(Y) = E(β0+ β1x(i) + ε(i))
+         = E(β0+ β1x(i) + ε(i))
+       If the expectation(mean) of residuals, E(ε(i)), is zero, the expectations of the target variable and the model become the same, which is one of the targets of the model.
+       The residuals (also known as error terms) should be independent. This means that there is no correlation between the residuals and the predicted values, or among the residuals themselves. If some correlation is present, it implies that there is some relation that the regression model is not able to identify.
+       If the independent variables are not linearly independent of each other, the uniqueness of the least squares solution (or normal equation solution) is lost.
+
+3. What is feature engineering? How do you apply it in the process of modelling?
+  Feature engineering is the process of transforming raw data into features that better represent the underlying problem to the predictive models, resulting in improved model accuracy on unseen data.
+  In layman terms, feature engineering means the development of new features that may help you understand and model the problem in a better way. Feature engineering is of two kinds — business driven and data-driven. Business-driven feature engineering revolves around the inclusion of features from a business point of view. The job here is to transform the business variables into features of the problem. In case of data-driven feature engineering, the features you add do not have any significant physical interpretation, but they help the model in the prediction of the target variable.
+  To apply feature engineering, one must be fully acquainted with the dataset. This involves knowing what the given data is, what it signifies, what the raw features are, etc. You must also have a crystal clear idea of the problem, such as what factors affect the target variable, what the physical interpretation of the variable is, etc.
+	
+
+4. What is the use of regularisation? Explain L1 and L2 regularisations.
+  Regularisation is a technique that is used to tackle the problem of overfitting of the model. 
+	When a very complex model is implemented on the training data, it overfits. 
+	At times, the simple model might not be able to generalise the data and the complex model overfits. 
+	To address this problem, regularisation is used.
+  Regularisation is nothing but adding the coefficient terms (betas) to the cost function so that the terms are penalised 
+	and are small in magnitude. This essentially helps in capturing the trends in the data and at the same time prevents overfitting by not letting the model become too complex.
+
+  L1 or LASSO regularisation: 
+		Here, the absolute values of the coefficients are added to the cost function. 
+		This can be seen in the following equation; the highlighted part corresponds to the L1 or LASSO regularisation. 
+		This regularisation technique gives sparse results, which lead to feature selection as well.
+  L2 or Ridge regularisation: 
+		Here, the squares of the coefficients are added to the cost function. 
+		This can be seen in the following equation, where the highlighted part corresponds to the L2 or Ridge regularisation.
+
+
+5. How to choose the value of the parameter learning rate (α)?
+		Selecting the value of learning rate is a tricky business. If the value is too small, the gradient descent algorithm takes ages to converge to the optimal solution. On the other hand, if the value of the learning rate is high, the gradient descent will overshoot the optimal solution and most likely never converge to the optimal solution.
+		To overcome this problem, you can try different values of alpha over a range of values and plot the cost vs the number of iterations. Then, based on the graphs, the value corresponding to the graph showing the rapid decrease can be chosen.
+		The aforementioned graph is an ideal cost vs the number of iterations curve. Note that the cost initially decreases as the number of iterations increases, but after certain iterations, the gradient descent converges and the cost does not decrease anymore.
+		If you see that the cost is increasing with the number of iterations, your learning rate parameter is high and it needs to be decreased.
+
+6. How to choose the value of the regularisation parameter (λ)?
+		Selecting the regularisation parameter is a tricky business. If the value of λ is too high, it will lead to extremely small values of the regression coefficient β, which will lead to the model underfitting (high bias – low variance). On the other hand, if the value of λ is 0 (very small), the model will tend to overfit the training data (low bias – high variance).
+		There is no proper way to select the value of λ. What you can do is have a sub-sample of data and run the algorithm multiple times on different sets. Here, the person has to decide how much variance can be tolerated. Once the user is satisfied with the variance, that value of λ can be chosen for the full dataset.
+		One thing to be noted is that the value of λ selected here was optimal for that subset, not for the entire training data.
+
+7. Can we use linear regression for time series analysis?
+		One can use linear regression for time series analysis, but the results are not promising. So, it is generally not advisable to do so. The reasons behind this are —
+		Time series data is mostly used for the prediction of the future, but linear regression seldom gives good results for future prediction as it is not meant for extrapolation.
+		Mostly, time series data have a pattern, such as during peak hours, festive seasons, etc., which would most likely be treated as outliers in the linear regression analysis.
+
+8. What value is the sum of the residuals of a linear regression close to? Justify.
+	Ans The sum of the residuals of a linear regression is 0. Linear regression works on the assumption that the errors (residuals) are normally distributed with a mean of 0, i.e.
+	Y = βT X + ε
+	Here, Y is the target or dependent variable,
+	β is the vector of the regression coefficient,
+	X is the feature matrix containing all the features as the columns,
+	ε is the residual term such that ε ~ N(0,σ2).
+	So, the sum of all the residuals is the expected value of the residuals times the total number of data points. Since the expectation of residuals is 0, the sum of all the residual terms is zero.
+	Note: N(μ,σ2) is the standard notation for a normal distribution having mean μ and standard deviation σ2.
+
+9. How does multicollinearity affect the linear regression?
+	Ans Multicollinearity occurs when some of the independent variables are highly correlated (positively or negatively) with each other. This multicollinearity causes a problem as it is against the basic assumption of linear regression. The presence of multicollinearity does not affect the predictive capability of the model. So, if you just want predictions, the presence of multicollinearity does not affect your output. However, if you want to draw some insights from the model and apply them in, let’s say, some business model, it may cause problems.
+	One of the major problems caused by multicollinearity is that it leads to incorrect interpretations and provides wrong insights. The coefficients of linear regression suggest the mean change in the target value if a feature is changed by one unit. So, if multicollinearity exists, this does not hold true as changing one feature will lead to changes in the correlated variable and consequent changes in the target variable. This leads to wrong insights and can produce hazardous results for a business.
+	A highly effective way of dealing with multicollinearity is the use of VIF (Variance Inflation Factor). Higher the value of VIF for a feature, more linearly correlated is that feature. Simply remove the feature with very high VIF value and re-train the model on the remaining dataset.
+
+10. What is the normal form (equation) of linear regression? When should it be preferred to the gradient descent method?
+	The normal equation for linear regression is —
+
+	β=(XTX)-1.XTY
+
+	Here, Y=βTX is the model for the linear regression,
+	Y is the target or dependent variable,
+	β is the vector of the regression coefficient, which is arrived at using the normal equation,
+	X is the feature matrix containing all the features as the columns.
+	Note here that the first column in the X matrix consists of all 1s. This is to incorporate the offset value for the regression line.
+	Comparison between gradient descent and normal equation:
+
+Gradient Descent	Normal Equation
+Needs hyper-parameter tuning for alpha (learning parameter)	No such need
+It is an iterative process	It is a non-iterative process
+O(kn2) time complexity	O(n3) time complexity due to evaluation of XTX
+Prefered when n is extremely large	Becomes quite slow for large values of n
+Here, ‘k’ is the maximum number of iterations for gradient descent, and ‘n’ is the total number of data points in the training set.
+Clearly, if we have large training data, normal equation is not prefered for use. For small values of ‘n’, normal equation is faster than gradient descent.
+
+
+11. You run your regression on different subsets of your data, and in each subset, the beta value for a certain variable varies wildly. What could be the issue here?
+This case implies that the dataset is heterogeneous. So, to overcome this problem, the dataset should be clustered into different subsets, and then separate models should be built for each cluster. Another way to deal with this problem is to use non-parametric models, such as decision trees, which can deal with heterogeneous data quite efficiently.
+
+12. Your linear regression doesn’t run and communicates that there is an infinite number of best estimates for the regression coefficients. What could be wrong?
+This condition arises when there is a perfect correlation (positive or negative) between some variables. In this case, there is no unique value for the coefficients, and hence, the given condition arises.
+
+13. What do you mean by adjusted R2? How is it different from R2?
+Adjusted R2, just like R2, is a representative of the number of points lying around the regression line. That is, it shows how well the model is fitting the training data. The formula for adjusted R2  is —
+Here, n is the number of data points, and k is the number of features.
+One drawback of R2 is that it will always increase with the addition of a new feature, whether the new feature is useful or not. The adjusted R2 overcomes this drawback. The value of the adjusted R2 increases only if the newly added feature plays a significant role in the model.
+
+14. How do you interpret the residual vs fitted value curve?
+The residual vs fitted value plot is used to see whether the predicted values and residuals have a correlation or not. If the residuals are distributed normally, with a mean around the fitted value and a constant variance, our model is working fine; otherwise, there is some issue with the model.
+The most common problem that can be found when training the model over a large range of a dataset is heteroscedasticity(this is explained in the answer below). The presence of heteroscedasticity can be easily seen by plotting the residual vs fitted value curve.
+
+15. What is heteroscedasticity? What are the consequences, and how can you overcome it?
+A random variable is said to be heteroscedastic when different subpopulations have different variabilities (standard deviation).
+The existence of heteroscedasticity gives rise to certain problems in the regression analysis as the assumption says that error terms are uncorrelated and, hence, the variance is constant. The presence of heteroscedasticity can often be seen in the form of a cone-like scatter plot for residual vs fitted values.
+One of the basic assumptions of linear regression is that heteroscedasticity is not present in the data. Due to the violation of assumptions, the Ordinary Least Squares (OLS) estimators are not the Best Linear Unbiased Estimators (BLUE). Hence, they do not give the least variance than other Linear Unbiased Estimators (LUEs).
+There is no fixed procedure to overcome heteroscedasticity. However, there are some ways that may lead to a reduction of heteroscedasticity. They are —
+
+Logarithmising the data: A series that is increasing exponentially often results in increased variability. This can be overcome using the log transformation.
+Using weighted linear regression: Here, the OLS method is applied to the weighted values of X and Y. One way is to attach weights directly related to the magnitude of the dependent variable.
+How does Unsupervised Machine Learning Work?
+16. What is VIF? How do you calculate it?
+Variance Inflation Factor (VIF) is used to check the presence of multicollinearity in a dataset. It is calculated as— 
+
+Here, VIFj  is the value of VIF for the jth variable,
+Rj2 is the R2 value of the model when that variable is regressed against all the other independent variables.
+If the value of VIF is high for a variable, it implies that the R2  value of the corresponding model is high, i.e. other independent variables are able to explain that variable. In simple terms, the variable is linearly dependent on some other variables.
+
+17. How do you know that linear regression is suitable for any given data?
+To see if linear regression is suitable for any given data, a scatter plot can be used. If the relationship looks linear, we can go for a linear model. But if it is not the case, we have to apply some transformations to make the relationship linear. Plotting the scatter plots is easy in case of simple or univariate linear regression. But in case of multivariate linear regression, two-dimensional pairwise scatter plots, rotating plots, and dynamic graphs can be plotted.
+
+18. How is hypothesis testing used in linear regression?
+Hypothesis testing can be carried out in linear regression for the following purposes:
+
+To check whether a predictor is significant for the prediction of the target variable. Two common methods for this are —
+By the use of p-values:
+If the p-value of a variable is greater than a certain limit (usually 0.05), the variable is insignificant in the prediction of the target variable.
+By checking the values of the regression coefficient:
+If the value of regression coefficient corresponding to a predictor is zero, that variable is insignificant in the prediction of the target variable and has no linear relationship with it.
+To check whether the calculated regression coefficients are good estimators of the actual coefficients.  
+19. Explain gradient descent with respect to linear regression.
+Gradient descent is an optimisation algorithm. In linear regression, it is used to optimise the cost function and find the values of the βs (estimators) corresponding to the optimised value of the cost function.
+Gradient descent works like a ball rolling down a graph (ignoring the inertia). The ball moves along the direction of the greatest gradient and comes to rest at the flat surface (minima).
+
+Mathematically, the aim of gradient descent for linear regression is to find the solution of
+ArgMin J(Θ0,Θ1), where J(Θ0,Θ1) is the cost function of the linear regression. It is given by —  
+
+Here, h is the linear hypothesis model, h=Θ0 + Θ1x, y is the true output, and m is the number of the data points in the training set.
+Gradient Descent starts with a random solution, and then based on the direction of the gradient, the solution is updated to the new value where the cost function has a lower value.
+The update is:
+Repeat until convergence
+
+
+20. How do you interpret a linear regression model?
+	A linear regression model is quite easy to interpret. The model is of the following form:
+	The significance of this model lies in the fact that one can easily interpret and understand the marginal changes and their consequences. For example, if the value of x0 increases by 1 unit, keeping other variables constant, the total increase in the value of y will be βi. Mathematically, the intercept term (β0) is the response when all the predictor terms are set to zero or not considered.
+	These 6 Machine Learning Techniques are Improving Healthcare
+
+21. What is robust regression?
+	A regression model should be robust in nature. This means that with changes in a few observations, the model should not change drastically. Also, it should not be much affected by the outliers.
+	A regression model with OLS (Ordinary Least Squares) is quite sensitive to the outliers. To overcome this problem, we can use the WLS (Weighted Least Squares) method to determine the estimators of the regression coefficients. Here, less weights are given to the outliers or high leverage points in the fitting, making these points less impactful.
+
+22. Which graphs are suggested to be observed before model fitting?
+	Before fitting the model, one must be well aware of the data, such as what the trends, distribution, skewness, etc. in the variables are. Graphs such as histograms, box plots, and dot plots can be used to observe the distribution of the variables. Apart from this, one must also analyse what the relationship between dependent and independent variables is. This can be done by scatter plots (in case of univariate problems), rotating plots, dynamic plots, etc.
+
+23. What is the generalized linear model?
+	The generalized linear model is the derivative of the ordinary linear regression model. GLM is more flexible in terms of residuals and can be used where linear regression does not seem appropriate. GLM allows the distribution of residuals to be other than a normal distribution. It generalizes the linear regression by allowing the linear model to link to the target variable using the linking function. Model estimation is done using the method of maximum likelihood estimation.
+
+24. Explain the bias-variance trade-off.
+	Bias refers to the difference between the values predicted by the model and the real values. It is an error. One of the goals of an ML algorithm is to have a low bias.
+	Variance refers to the sensitivity of the model to small fluctuations in the training dataset. Another goal of an ML algorithm is to have low variance.
+	For a dataset that is not exactly linear, it is not possible to have both bias and variance low at the same time. A straight line model will have low variance but high bias, whereas a high-degree polynomial will have low bias but high variance.
+	There is no escaping the relationship between bias and variance in machine learning.
+	Decreasing the bias increases the variance.
+	Decreasing the variance increases the bias.
+	So, there is a trade-off between the two; the ML specialist has to decide, based on the assigned problem, how much bias and variance can be tolerated. Based on this, the final model is built.
+
+25. How can learning curves help create a better model?
+	Learning curves give the indication of the presence of overfitting or underfitting.
+	In a learning curve, the training error and cross-validating error are plotted against the number of training data points. A typical learning curve looks like this:
+	If the training error and true error (cross-validating error) converge to the same value and the corresponding value of the error is high, it indicates that the model is underfitting and is suffering from high bias.
+	If there is a significant gap between the converging values of the training and cross-validating errors, i.e. the cross-validating error is significantly higher than the training error, it suggests that the model is overfitting the training data and is suffering from a high variance.
