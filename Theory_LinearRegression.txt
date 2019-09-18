@@ -1,0 +1,7 @@
+
+Tips for linear regression------
+
+Could you imagine if you had a dataset that has a few outliers? Least Squares Regression is susceptible to outliers; one could imagine that that would impact the calculation of the average, if you have some extreme outliers. Suppose your dataset isn't that big either, then it is even more susceptible to outliers, making the linear regression algorithm perform poorly.
+When performing linear regression, we have to be wary of overfitting. It is too easy to use too complicated of a model, by the formula 
+.It might be a clear indication of overfitting, if you use too many input variables in linear regression, such that less input variables will give a better model.
+Finally, always remember to evaluate your model using new data, that you did not train you model on. If you evaluate on the same data as you trained your model, you could get a different picture of which model is the best for new data.
