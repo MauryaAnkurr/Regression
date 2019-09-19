@@ -9,7 +9,8 @@ Finally, always remember to evaluate your model using new data, that you did not
 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+Example: Correlation and Causation
+___________________________________
 Just because there’s a strong correlation between two variables, there isn’t necessarily a causal relationship between them. 
 For example, drowning deaths and ice-cream sales are strongly correlated, but that’s because both are affected by the season (summer vs. winter). 
 In general, there are several possible cases, as illustrated below:
@@ -27,3 +28,14 @@ The correlation just happened by chance (e.g. the strong correlation between sun
 
 Important Link : 
 http://www.mit.edu/~6.s085/notes/lecture3.pdf
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Interpolation vs. extrapolation
+________________________________
+As a reminder, everything here crucially depends on the probabilistic model being true. 
+In practice, when we do prediction for some value of x we haven’t seen before, we need to be very careful. Predicting y for a value of x that is within the interval of points that we saw in the original data (the data that we fit our model with) is called
+interpolation. Predicting y for a value of x that’s outside the range of values we actually saw for x in the original data is called extrapolation. For real datasets, even if a linear fit seems appropriate, we need to be extremely careful
+about extrapolation, which can often lead to false predictions!
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
