@@ -1,7 +1,29 @@
 
 Tips for linear regression------
 
-Could you imagine if you had a dataset that has a few outliers? Least Squares Regression is susceptible to outliers; one could imagine that that would impact the calculation of the average, if you have some extreme outliers. Suppose your dataset isn't that big either, then it is even more susceptible to outliers, making the linear regression algorithm perform poorly.
-When performing linear regression, we have to be wary of overfitting. It is too easy to use too complicated of a model, by the formula 
-.It might be a clear indication of overfitting, if you use too many input variables in linear regression, such that less input variables will give a better model.
+Could you imagine if you had a dataset that has a few outliers?
+Least Squares Regression is susceptible to outliers; one could imagine that that would impact the calculation of the average, if you have some extreme outliers. Suppose your dataset isn't that big either, then it is even more susceptible to outliers, making the linear regression algorithm perform poorly.
+When performing linear regression, we have to be wary of overfitting. It is too easy to use too complicated of a model, by the formula.
+It might be a clear indication of overfitting, if you use too many input variables in linear regression, such that less input variables will give a better model.
 Finally, always remember to evaluate your model using new data, that you did not train you model on. If you evaluate on the same data as you trained your model, you could get a different picture of which model is the best for new data.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Just because there’s a strong correlation between two variables, there isn’t necessarily a causal relationship between them. 
+For example, drowning deaths and ice-cream sales are strongly correlated, but that’s because both are affected by the season (summer vs. winter). 
+In general, there are several possible cases, as illustrated below:
+ a) Causal link: Even
+if there is a causal link between x and y, correlation alone cannot tell us whether y causes x or
+
+(b) Hidden Cause:
+A hidden variable z causes both x and y, creating the correlation.
+
+(c) Confounding
+Factor: A hidden variable z and x both affect y, so the results also depend on the value of z.
+x y
+(d) Coincidence:
+The correlation just happened by chance (e.g. the strong correlation between sun cycles and number of Republicans in Congress)
+
+Important Link : 
+http://www.mit.edu/~6.s085/notes/lecture3.pdf
