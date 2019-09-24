@@ -175,9 +175,12 @@ Repeat until convergence
 	The generalized linear model is the derivative of the ordinary linear regression model. GLM is more flexible in terms of residuals and can be used where linear regression does not seem appropriate. GLM allows the distribution of residuals to be other than a normal distribution. It generalizes the linear regression by allowing the linear model to link to the target variable using the linking function. Model estimation is done using the method of maximum likelihood estimation.
 
 24. Explain the bias-variance trade-off.
-	Bias refers to the difference between the values predicted by the model and the real values. It is an error. One of the goals of an ML algorithm is to have a low bias.
-	Variance refers to the sensitivity of the model to small fluctuations in the training dataset. Another goal of an ML algorithm is to have low variance.
-	For a dataset that is not exactly linear, it is not possible to have both bias and variance low at the same time. A straight line model will have low variance but high bias, whereas a high-degree polynomial will have low bias but high variance.
+	Bias refers to the difference between the values predicted by the model and the real values. It is an error. 
+	One of the goals of an ML algorithm is to have a low bias.
+	Variance refers to the sensitivity of the model to small fluctuations in the training dataset. 
+	Another goal of an ML algorithm is to have low variance.
+	For a dataset that is not exactly linear, it is not possible to have both bias and variance low at the same time. 
+	A straight line model will have low variance but high bias, whereas a high-degree polynomial will have low bias but high variance.
 	There is no escaping the relationship between bias and variance in machine learning.
 	Decreasing the bias increases the variance.
 	Decreasing the variance increases the bias.
@@ -185,4 +188,6 @@ Repeat until convergence
 
 25. How can learning curves help create a better model?
 	Learning curves give the indication of the presence of overfitting or underfitting.
-	In a learning curve, the training error and cross-validating error are plotted against the number of training data points. A typical learning curve looks like this:If the training error and true error (cross-validating error) converge to the same value and the corresponding value of the error is high, it indicates that the model is underfitting and is suffering from high bias.If there is a significant gap between the converging values of the training and cross-validating errors, i.e. the cross-validating error is significantly higher than the training error, it suggests that the model is overfitting the training data and is suffering from a high variance.
+	In a learning curve, the training error and cross-validating error are plotted against the number of training data points.
+	If the training error and true error (cross-validating error) converge to the same value and the corresponding value of the error is high, it indicates that the model is underfitting and is suffering from high bias.
+	If there is a significant gap between the converging values of the training and cross-validating errors, i.e. the cross-validating error is significantly higher than the training error, it suggests that the model is overfitting the training data and is suffering from a high variance.
