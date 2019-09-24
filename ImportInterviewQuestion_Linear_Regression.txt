@@ -138,17 +138,16 @@ If the value of VIF is high for a variable, it implies that the R2  value of the
 To see if linear regression is suitable for any given data, a scatter plot can be used. If the relationship looks linear, we can go for a linear model. But if it is not the case, we have to apply some transformations to make the relationship linear. Plotting the scatter plots is easy in case of simple or univariate linear regression. But in case of multivariate linear regression, two-dimensional pairwise scatter plots, rotating plots, and dynamic graphs can be plotted.
 
 18. How is hypothesis testing used in linear regression?
-Hypothesis testing can be carried out in linear regression for the following purposes:
-
-To check whether a predictor is significant for the prediction of the target variable. Two common methods for this are —
-By the use of p-values:
-If the p-value of a variable is greater than a certain limit (usually 0.05), the variable is insignificant in the prediction of the target variable.
-By checking the values of the regression coefficient:
-If the value of regression coefficient corresponding to a predictor is zero, that variable is insignificant in the prediction of the target variable and has no linear relationship with it.
-To check whether the calculated regression coefficients are good estimators of the actual coefficients.  
+     Hypothesis testing can be carried out in linear regression for the following purposes:
+	To check whether a predictor is significant for the prediction of the target variable. Two common methods for this are —
+	By the use of p-values:
+	If the p-value of a variable is greater than a certain limit (usually 0.05), the variable is insignificant in the prediction of 	the target variable.
+	By checking the values of the regression coefficient:
+	If the value of regression coefficient corresponding to a predictor is zero, that variable is insignificant in the prediction of 	the target variable and has no linear relationship with it.
+	To check whether the calculated regression coefficients are good estimators of the actual coefficients.  
 19. Explain gradient descent with respect to linear regression.
-Gradient descent is an optimisation algorithm. In linear regression, it is used to optimise the cost function and find the values of the βs (estimators) corresponding to the optimised value of the cost function.
-Gradient descent works like a ball rolling down a graph (ignoring the inertia). The ball moves along the direction of the greatest gradient and comes to rest at the flat surface (minima).
+	Gradient descent is an optimisation algorithm. In linear regression, it is used to optimise the cost function and find the 		values of the βs (estimators) corresponding to the optimised value of the cost function.
+	Gradient descent works like a ball rolling down a graph (ignoring the inertia). The ball moves along the direction of the 		greatest gradient and comes to rest at the flat surface (minima).
 
 Mathematically, the aim of gradient descent for linear regression is to find the solution of
 ArgMin J(Θ0,Θ1), where J(Θ0,Θ1) is the cost function of the linear regression. It is given by —  
@@ -169,10 +168,15 @@ Repeat until convergence
 	A regression model with OLS (Ordinary Least Squares) is quite sensitive to the outliers. To overcome this problem, we can use the WLS (Weighted Least Squares) method to determine the estimators of the regression coefficients. Here, less weights are given to the outliers or high leverage points in the fitting, making these points less impactful.
   
 22. Which graphs are suggested to be observed before model fitting?
-	Before fitting the model, one must be well aware of the data, such as what the trends, distribution, skewness, etc. in the   variables are. Graphs such as histograms, box plots, and dot plots can be used to observe the distribution of the variables. Apart from this, one must also analyse what the relationship between dependent and independent variables is. This can be done by scatter plots (in case of univariate problems), rotating plots, dynamic plots, etc.
+	Before fitting the model, one must be well aware of the data, such as what the trends, distribution, skewness, etc. in the   variables are. 
+	Graphs such as histograms, box plots, and dot plots can be used to observe the distribution of the variables. 
+	Apart from this, one must also analyse what the relationship between dependent and independent variables is. 
+	This can be done by scatter plots (in case of univariate problems), rotating plots, dynamic plots, etc.
 
 23. What is the generalized linear model?
-	The generalized linear model is the derivative of the ordinary linear regression model. GLM is more flexible in terms of residuals and can be used where linear regression does not seem appropriate. GLM allows the distribution of residuals to be other than a normal distribution. It generalizes the linear regression by allowing the linear model to link to the target variable using the linking function. Model estimation is done using the method of maximum likelihood estimation.
+	The generalized linear model is the derivative of the ordinary linear regression model. GLM is more flexible in terms of residuals and can be used where linear regression does not seem appropriate. 
+	GLM allows the distribution of residuals to be other than a normal distribution. 
+	It generalizes the linear regression by allowing the linear model to link to the target variable using the linking function. Model estimation is done using the method of maximum likelihood estimation.
 
 24. Explain the bias-variance trade-off.
 	Bias refers to the difference between the values predicted by the model and the real values. It is an error. 
