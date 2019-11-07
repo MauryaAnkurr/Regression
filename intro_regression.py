@@ -4,4 +4,4 @@ import Quandl
 df = df.Quandl.get('WIKI/GOOGL')
 
 
-
+   +++++++++++++++++++++++++++++++++++++++++++++++++++==
