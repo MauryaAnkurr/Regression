@@ -82,7 +82,6 @@ _______________________________________
       represents the data.  If the regression line passes exactly through every point on the
       scatter plot, it would be able to explain all of the variation. The further the line is
       away from the points, the less it is able to explain.
-      
-      
-      
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       
