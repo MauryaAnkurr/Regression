@@ -1,4 +1,9 @@
 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ https://www.ritchieng.com/machine-learning-evaluate-linear-regression-model/
+ Must read blog on linear regression.
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Tips for linear regression------
 
 Could you imagine if you had a dataset that has a few outliers?
@@ -84,4 +89,7 @@ _______________________________________
       away from the points, the less it is able to explain.
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-      
+ 
+ 
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
