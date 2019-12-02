@@ -2,7 +2,13 @@
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  https://www.ritchieng.com/machine-learning-evaluate-linear-regression-model/
  Must read blog on linear regression.
- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++____________________
+ 
+ read here about regularization
+ 
+ https://www.youtube.com/watch?v=B4Yq8uNYhBk&list=PL9jmvZt4yYPp4bCHzOp2gJE0E7OV6MLjW&index=1
+ 
+ _______________________________++++++++++++++++++++++++____________________________________
 
 Tips for linear regression------
 
