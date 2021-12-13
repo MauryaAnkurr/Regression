@@ -31,6 +31,9 @@ if there is a causal link between x and y, correlation alone cannot tell us whet
 (b) Hidden Cause:
 A hidden variable z causes both x and y, creating the correlation.
 
+
+#
+https://hackernoon.com/160-data-science-interview-questions-415s3y2a
 (c) Confounding
 Factor: A hidden variable z and x both affect y, so the results also depend on the value of z.
 x y
