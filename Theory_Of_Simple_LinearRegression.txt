@@ -100,5 +100,6 @@ _______________________________________
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  
  
-
+https://www.datasciencecentral.com/profiles/blogs/66-job-interview-questions-for-data-scientists
+https://www.projectpro.io/article/2018-data-science-interview-questions-for-top-tech-companies/189
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
